@@ -9,6 +9,7 @@
 body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
   overflow-x: hidden;
+  width: 100vw;
 }
 
 a {
@@ -83,6 +84,7 @@ nav ul li.current {
 /* ------------------------------------ */
 
 section#section1 {
+  position: relative;
   min-height: 90vh;
   width: 100%;
   display: flex;
@@ -251,11 +253,13 @@ section#section3 section#services-area {
   text-align: center;
   color: #fff;
   background: url("../assets/img/bg-2.jpg");
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
+  width: 100vw;
   height: 50vh;
   line-height: 1.6em;
+  overflow: hidden;
 }
 
 section#section3 section#services-area h1 {
@@ -278,14 +282,14 @@ section#section3 section#testimornial-area {
   color: #333;
 }
 
-section#section3 section#testimornial-area>div div#detail-services {
+section#section3 section#testimornial-area > div div#detail-services {
   display: flex;
   gap: 2rem;
   justify-content: space-between;
   margin-bottom: 2rem;
 }
 
-section#section3 section#testimornial-area>div div#detail-services div.testimonial-content {
+section#section3 section#testimornial-area > div div#detail-services div.testimonial-content {
   background-color: #f2f2f2;
   width: 25%;
   display: flex;
@@ -307,7 +311,7 @@ section#section3 section#testimornial-area p {
   line-height: 1.6em;
 }
 
-section#section3 section#testimornial-area .content-link:hover>a {
+section#section3 section#testimornial-area .content-link:hover > a {
   color: #337ab7;
 }
 
@@ -343,7 +347,7 @@ section#section4 {
   align-items: center;
   height: 90vh;
   background-image: url("../assets/img/bg-3.jpg");
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
