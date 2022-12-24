@@ -6,6 +6,8 @@ const section2 = document.getElementById("section2");
 const section3 = document.getElementById("section3");
 const contact_section = document.getElementById("section4");
 const sections = [section1, section2, section3, contact_section];
+const buttonBar = document.getElementById("button-bar");
+const navBar = document.getElementsByTagName('nav')[0];
 
 for (let i = 0; i < buttonNav.length; i++) {
   const button = buttonNav[i];
@@ -13,6 +15,15 @@ for (let i = 0; i < buttonNav.length; i++) {
     button.firstElementChild.click();
   });
 }
+
+buttonBar.addEventListener("click", (e) => {
+  if (navBar.className == 'show') {
+    navBar.className = ''
+  } else {
+    navBar.className = 'show'
+  }
+  console.log(navBar.className);
+})
 
 window.addEventListener("scroll", () => {
   let { scrollTop, clientHeight } = document.documentElement;
