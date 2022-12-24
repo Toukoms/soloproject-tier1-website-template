@@ -26,7 +26,6 @@ window.addEventListener("scroll", () => {
     let bottom = bbox.bottom + scrollTop;
     if (top < middleScreen && middleScreen < bottom) {
       buttonNav[id].className = "btn-nav current";
-      console.log(section.id);
     } else {
       buttonNav[id].className = "btn-nav";
     }

@@ -47,30 +47,34 @@ li {
 
 nav {
   position: fixed;
+  top: 0;
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #383e4c;
+  background-color: #020a20ef;
   z-index: 10000;
   padding: 0.5rem 0 1rem 0;
 }
 
 nav ul {
   display: flex;
+  justify-content: center;
+  /* min-width: 60%; */
+  max-width: 60%;
+  margin: auto;
 }
 
 nav ul li {
   border: #646d7c 1px solid;
-  margin: 0 0.75rem;
-  padding: 0.85rem 1.45rem;
+  margin: 0 6px;
+  padding: 15px 25px;
   transition: all 0.3s ease;
   cursor: pointer;
+  text-align: center;
 }
 
 nav ul li a {
   color: #fff;
   font-size: 1.25rem;
+  white-space: nowrap;
 }
 
 nav ul li:hover {
@@ -112,25 +116,37 @@ section#section1 header.intro-section {
 }
 
 section#section1 header.intro-section h1 {
-  font-size: 4.5rem;
+  white-space: nowrap;
+  font-size: calc(2rem + 2.5vw);
+  text-transform: capitalize;
   font-weight: 500;
   text-shadow: 2px 2px #000;
 }
 
 section#section1 header.intro-section h4 {
-  font-size: 1.5rem;
+  margin: auto;
+  width: 60%;
+  font-size: calc(.25rem + 2vw);
   text-shadow: 1px 1px #333;
   font-weight: 100;
+  color: #ddd;
 }
 
 /* ------------------------------------ */
 
 section#section2 {
   width: 100vw;
-  padding: 3.8rem 6.4rem;
   padding-top: 5.6rem;
+  padding-bottom: 3.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #666666;
   background-color: #fff;
+}
+
+section#section2>div {
+  max-width: 80%;
 }
 
 section#section2 p {
@@ -140,11 +156,8 @@ section#section2 p {
 }
 
 section#section2 section#feature-area {
-  /* width: 48rem; */
-  /* height: 25rem; */
   display: flex;
   justify-content: center;
-  margin: auto;
   margin-bottom: 3rem;
 }
 
@@ -152,7 +165,8 @@ section#section2 section#feature-area .feature-content {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  /* width: 33%; */
+  max-width: 33%;
+  max-height: 35rem;
   background-color: #f2f2f2;
   margin: 0 1rem;
 }
@@ -217,7 +231,6 @@ section#section2 section#feature-area .feature-content>a {
 section#section2 section#blog-area {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
   gap: 1.75rem;
 }
 
@@ -225,6 +238,7 @@ section#section2 section#blog-area div.blog-content {
   display: flex;
   flex-direction: column;
   background-color: #f2f2f2;
+  max-width: 51.5%;
 }
 
 section#section2 section#blog-area div.blog-content div.description {
@@ -241,8 +255,8 @@ section#section2 section#blog-area div.blog-content div.description h2 {
 /* ------------------------------------ */
 
 section#section3 {
-  width: 100%;
-  padding: 2rem 0;
+  min-width: 100vw;
+  padding: 1rem 0;
   background-color: #fff;
 }
 
@@ -278,23 +292,29 @@ section#section3 section#testimornial-area {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem 10rem;
+  padding: 3rem 3rem;
+  margin: 0 calc(2% + 1rem);
   color: #333;
 }
 
-section#section3 section#testimornial-area > div div#detail-services {
+section#section3 section#testimornial-area>div {
+  min-width: 100%;
+}
+
+section#section3 section#testimornial-area>div div#detail-services {
   display: flex;
-  gap: 2rem;
   justify-content: space-between;
+  gap: 2rem;
   margin-bottom: 2rem;
 }
 
-section#section3 section#testimornial-area > div div#detail-services div.testimonial-content {
+section#section3 section#testimornial-area>div div#detail-services div.testimonial-content {
   background-color: #f2f2f2;
-  width: 25%;
+  width: calc(88% / 4);
   display: flex;
   flex-direction: column;
   text-align: center;
+
 }
 
 section#section3 section#testimornial-area h2 {
@@ -311,7 +331,7 @@ section#section3 section#testimornial-area p {
   line-height: 1.6em;
 }
 
-section#section3 section#testimornial-area .content-link:hover > a {
+section#section3 section#testimornial-area .content-link:hover>a {
   color: #337ab7;
 }
 
@@ -345,7 +365,7 @@ section#section4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: clamp(auto, 90vh, 80vh);
   background-image: url("../assets/img/bg-3.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -354,7 +374,7 @@ section#section4 {
 }
 
 section#section4 section#contact-area {
-  width: 50%;
+  max-width: 750px;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -365,8 +385,7 @@ section#section4 section#contact-area .form-control {
   background-color: #f2f2f266;
   color: #000;
   width: 100%;
-  padding: 6px 12px;
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 1.42857143;
   border-radius: 4px;
 }
@@ -374,22 +393,23 @@ section#section4 section#contact-area .form-control {
 section#section4 section#contact-area .contact-content p {
   height: 100%;
   width: 100%;
-  padding: 2rem;
+  padding: clamp(0.5rem, 1rem, 2rem);
 }
 
 section#section4 section#contact-area .contact-content h1 {
   text-transform: capitalize;
   color: #fff;
   text-shadow: 2px 2px #333;
-  margin-bottom: 30px;
+  margin-bottom: clamp(0.5rem, 1rem, 2rem);
   font-size: 2.25rem;
   font-weight: 500;
 }
 
-section#section4 section#contact-area input {
+section#section4 section#contact-area input, textarea {
   border: none;
   height: 100%;
   width: 100%;
+  padding: 0.75rem 12px;
 }
 
 section#section4 section#contact-area input:focus,
@@ -405,7 +425,6 @@ section#section4 section#contact-area form #contact-input {
   grid-template-rows: repeat(3, 2.75rem);
   row-gap: 0.5rem;
   column-gap: 1rem;
-  margin-bottom: 2rem;
 }
 
 section#section4 section#contact-area form #contact-input textarea {
@@ -470,4 +489,84 @@ footer div.container p {
 footer hr {
   border: 0;
   border-top: 1px solid #eee;
+}
+
+/* ----------------------- Responsive ------------------------ */
+@media screen and (max-width: 991px) {
+  
+  section#section3 section#testimornial-area>div div#detail-services div.testimonial-content {
+    min-width: 18rem;
+  }
+
+  section#section3 section#testimornial-area {
+    padding: 2rem 0;
+  }
+
+  section#section3 section#testimornial-area>div div#detail-services {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  nav ul li a {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  nav , nav *  {
+    visibility: hidden;
+    transition: 0s;
+  }
+
+  section#section2>div {
+    max-width: 100%;
+  }
+
+  section#section2 section#feature-area {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  section#section2 section#blog-area {
+    flex-wrap: wrap;
+  }
+
+  section#section2 section#feature-area .feature-content {
+    max-width: 60%;
+    min-height: 25rem;
+    gap: 1.75rem;
+  }
+
+  section#section2 section#blog-area div.blog-content {
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+  /* section#section4 section#contact-area {
+    
+  } */
+}
+
+@media screen and (max-height: 523px) and (max-width: 767px) {
+  section#section4 section#contact-area form #contact-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 387px) {
+  section#section2 section#feature-area .feature-content {
+    max-width: 90%;
+  }
+
+  section#section2 section#blog-area div.blog-content {
+    max-width: 90%;
+  }
 }
