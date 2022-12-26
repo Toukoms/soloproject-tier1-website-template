@@ -21,8 +21,20 @@ li {
   list-style: none;
 }
 
+#scroll-up {
+  position: fixed;
+  bottom: 0px;
+  right: 20px;
+    width: 38px;
+    height: 38px;
+  background-image: url('../assets/img/top.png');
+  transition: all 0.6s cubic-bezier(0, 1.45, 1, 1.45) 0.1s;
+  z-index: 20000;
+}
+
 #button-bar {
   visibility: hidden;
+  cursor: pointer;
 }
 
 .content-link {
@@ -129,7 +141,7 @@ section#section1 header.intro-section h1 {
 section#section1 header.intro-section h4 {
   margin: auto;
   width: 60%;
-  font-size: calc(.25rem + 2vw);
+  font-size: calc(1rem + 1vw);
   text-shadow: 1px 1px #333;
   font-weight: 100;
   color: #ddd;
@@ -170,7 +182,7 @@ section#section2 section#feature-area .feature-content {
   gap: 1.2rem;
   max-width: 33%;
   max-height: 35rem;
-  background-color: #f2f2f2;
+  background-color: #e0e0e0ef;
   margin: 0 1rem;
 }
 
@@ -240,7 +252,7 @@ section#section2 section#blog-area {
 section#section2 section#blog-area div.blog-content {
   display: flex;
   flex-direction: column;
-  background-color: #f2f2f2;
+  background-color: #e0e0e0ef;
   max-width: 51.5%;
 }
 
@@ -312,7 +324,7 @@ section#section3 section#testimornial-area>div div#detail-services {
 }
 
 section#section3 section#testimornial-area>div div#detail-services div.testimonial-content {
-  background-color: #f2f2f2;
+  background-color: #e0e0e0ef;
   width: calc(88% / 4);
   display: flex;
   flex-direction: column;
@@ -346,7 +358,7 @@ section#section3 section#testimornial-area .content-link {
 section#section3 section#testimornial-area div#big-column {
   display: flex;
   flex-direction: column;
-  background-color: #f2f2f2;
+  background-color: #e0e0e0ef;
 }
 
 section#section3 section#testimornial-area div#big-column .content-link {
@@ -368,7 +380,7 @@ section#section4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: clamp(auto, 90vh, 80vh);
+  height: clamp(100%, 80vh, 90vh);
   background-image: url("../assets/img/bg-3.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -385,7 +397,7 @@ section#section4 section#contact-area {
 }
 
 section#section4 section#contact-area .form-control {
-  background-color: #f2f2f266;
+  background-color: #e0e0e066;
   color: #000;
   width: 100%;
   font-size: 1rem;
@@ -485,7 +497,7 @@ footer p {
 }
 
 footer div.container p {
-  margin-bottom: 3.75rem;
+  margin-bottom: 2.75rem;
 }
 
 footer hr {
@@ -605,7 +617,7 @@ footer hr {
   }
 }
 
-@media screen and (max-height: 523px) and (max-width: 767px) {
+@media screen and (max-width: 424px) {
   section#section4 section#contact-area form #contact-input {
     display: flex;
     flex-direction: column;

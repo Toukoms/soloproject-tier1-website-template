@@ -9,9 +9,10 @@ const sections = [section1, section2, section3, contact_section];
 const buttonBar = document.getElementById("button-bar");
 const navBar = document.getElementsByTagName('nav')[0];
 const ext = document.getElementById("external")
+const scrollUp = document.getElementById("scroll-up");
 
 ext.addEventListener("click", (e) => {
-  ext.firstElementChildChild.click()
+  ext.children[0].click()
 })
 
 for (let i = 0; i < buttonNav.length; i++) {
@@ -27,7 +28,6 @@ buttonBar.addEventListener("click", (e) => {
   } else {
     navBar.className = 'show'
   }
-  console.log(navBar.className);
 })
 
 window.addEventListener("scroll", () => {
@@ -40,6 +40,14 @@ window.addEventListener("scroll", () => {
     let bbox = section.getBoundingClientRect();
     let top = bbox.top + scrollTop;
     let bottom = bbox.bottom + scrollTop;
+    if (id == 1) {
+      if (top < middleScreen) {
+        scrollUp.style = "bottom: 30px;"
+      } else {
+        scrollUp.style = "visibility: hidden;"
+      }
+    }
+
     if (top < middleScreen && middleScreen < bottom) {
       buttonNav[id].className = "btn-nav current";
     } else {
@@ -49,7 +57,7 @@ window.addEventListener("scroll", () => {
 
   bg_section1.style.top = scrollTop * 0.7 + "px";
   service_section.style.backgroundPositionY =
-    (boxParentBg2.y - boxParentBg2.height * 2) * 0.2 + "px";
+    boxParentBg2.top * 0.2 + "px";
   contact_section.style.backgroundPositionY =
-    (boxParentBg4.y - boxParentBg4.height * 2) * 0.2 + "px";
+  boxParentBg4.top * 0.2 + "px";
 });
