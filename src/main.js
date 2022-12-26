@@ -8,6 +8,11 @@ const contact_section = document.getElementById("section4");
 const sections = [section1, section2, section3, contact_section];
 const buttonBar = document.getElementById("button-bar");
 const navBar = document.getElementsByTagName('nav')[0];
+const ext = document.getElementById("external")
+
+ext.addEventListener("click", (e) => {
+  ext.firstElementChildChild.click()
+})
 
 for (let i = 0; i < buttonNav.length; i++) {
   const button = buttonNav[i];
