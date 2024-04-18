@@ -109,6 +109,7 @@ section#section1 {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background-color: #0006;
 }
 
 section#section1 img {
@@ -137,12 +138,11 @@ section#section1 header.intro-section h1 {
 }
 
 section#section1 header.intro-section h4 {
-  margin: auto;
-  width: 60%;
-  font-size: calc(1rem + 1vw);
-  text-shadow: 1px 1px #333;
-  font-weight: 100;
-  color: #ddd;
+    margin: auto;
+    width: 60%;
+    font-size: calc(0.8rem + 1vw);
+    font-weight: 400;
+    color: #ddd;
 }
 
 /* ------------------------------------ */
